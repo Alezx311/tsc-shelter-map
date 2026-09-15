@@ -1,0 +1,1074 @@
+{
+  "retrievedAt": "2026-09-15",
+  "routes": [
+    {
+      "id": "3246-1",
+      "number": 1,
+      "categories": [
+        "B",
+        "D",
+        "D1",
+        "BE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-1.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-1.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "scheme-checked",
+      "verified": true,
+      "color": "#245db1",
+      "notes": "Напрямок, петлю Микільської та південний розворот звірено зі стрілками схеми. Геоприв’язка до перехресть OSM; не навігація по смугах.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 8.7,
+      "sourceSha256": "99ad0bc308cd2d0805e695a3794cd9bc1a759e68700ebf7415d2c49e9523d259",
+      "originalSizeBytes": 311165,
+      "controls": [
+        [
+          [
+            617,
+            302
+          ],
+          [
+            30.3851527,
+            50.408897
+          ]
+        ],
+        [
+          [
+            583,
+            477
+          ],
+          [
+            30.3834933,
+            50.4039695
+          ]
+        ],
+        [
+          [
+            488,
+            420
+          ],
+          [
+            30.3793243,
+            50.4056115
+          ]
+        ],
+        [
+          [
+            384,
+            565
+          ],
+          [
+            30.3748528,
+            50.4015987
+          ]
+        ],
+        [
+          [
+            238,
+            683
+          ],
+          [
+            30.3684793,
+            50.3981564
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        5.7,
+        1.9,
+        7.4,
+        8.7,
+        5.9
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-1.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": true,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-2",
+      "number": 2,
+      "categories": [
+        "B",
+        "D",
+        "D1",
+        "BE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-2.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-2.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "scheme-checked",
+      "verified": true,
+      "color": "#b54437",
+      "notes": "Ручне оцифрування послідовності руху зі схеми; геоприв’язка до перехресть OSM. Не навігація по смугах.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 2.9,
+      "sourceSha256": "f3b1ccf1202753eff6551a9b38b5f65e1373b111b95aac533142339820062a68",
+      "originalSizeBytes": 344942,
+      "controls": [
+        [
+          [
+            361,
+            534
+          ],
+          [
+            30.3785839,
+            50.4049074
+          ]
+        ],
+        [
+          [
+            536,
+            637
+          ],
+          [
+            30.3858255,
+            50.4020332
+          ]
+        ],
+        [
+          [
+            273,
+            657
+          ],
+          [
+            30.3748528,
+            50.4015987
+          ]
+        ],
+        [
+          [
+            530,
+            316
+          ],
+          [
+            30.3859132,
+            50.4107508
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        2.9,
+        0.1,
+        1.9,
+        1.0
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-2.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": true,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-3",
+      "number": 3,
+      "categories": [
+        "B",
+        "C1",
+        "C",
+        "D",
+        "D1",
+        "BE",
+        "C1E",
+        "CE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-3.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-3.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "needs-review",
+      "verified": false,
+      "color": "#87549d",
+      "notes": "Послідовність відгалужень і повторних проїздів неоднозначна.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 11.1,
+      "sourceSha256": "ce31bde25a15cbff2bdd45d11934d162cea2952f7c544cb735ebfdbb096af806",
+      "originalSizeBytes": 304555,
+      "controls": [
+        [
+          [
+            587,
+            315
+          ],
+          [
+            30.3851527,
+            50.408897
+          ]
+        ],
+        [
+          [
+            553,
+            490
+          ],
+          [
+            30.3834933,
+            50.4039695
+          ]
+        ],
+        [
+          [
+            450,
+            435
+          ],
+          [
+            30.3793243,
+            50.4056115
+          ]
+        ],
+        [
+          [
+            249,
+            637
+          ],
+          [
+            30.3702256,
+            50.3998435
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        7.3,
+        0.8,
+        11.1,
+        4.6
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-3.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": false,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-4",
+      "number": 4,
+      "categories": [
+        "B",
+        "D",
+        "D1",
+        "BE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-4.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-4.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "scheme-checked",
+      "verified": true,
+      "color": "#00836b",
+      "notes": "Ручне оцифрування послідовності руху зі схеми; геоприв’язка до перехресть OSM. Не навігація по смугах.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 17.4,
+      "sourceSha256": "df866e316690957239b86be0786109eac6b375f01c9fba7801445635e105b72e",
+      "originalSizeBytes": 347458,
+      "controls": [
+        [
+          [
+            295,
+            435
+          ],
+          [
+            30.3785839,
+            50.4049074
+          ]
+        ],
+        [
+          [
+            394,
+            493
+          ],
+          [
+            30.3827092,
+            50.4032367
+          ]
+        ],
+        [
+          [
+            212,
+            552
+          ],
+          [
+            30.3748528,
+            50.4015987
+          ]
+        ],
+        [
+          [
+            447,
+            247
+          ],
+          [
+            30.3859132,
+            50.4107508
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        17.4,
+        0.9,
+        11.5,
+        6.9
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-4.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": true,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-5",
+      "number": 5,
+      "categories": [
+        "B",
+        "C1",
+        "C",
+        "D",
+        "D1",
+        "BE",
+        "C1E",
+        "CE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-5.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-5.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "scheme-checked",
+      "verified": true,
+      "color": "#bd7400",
+      "notes": "Оцифровано зі схеми, геоприв’язано до перехресть OSM; не навігація по смугах.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 24.3,
+      "sourceSha256": "7004b6c6b1ea4d213c5d82902b2f6aaaab65323e3836c628b94c7718bca874e1",
+      "originalSizeBytes": 311239,
+      "controls": [
+        [
+          [
+            321,
+            628
+          ],
+          [
+            30.3702256,
+            50.3998435
+          ]
+        ],
+        [
+          [
+            291,
+            665
+          ],
+          [
+            30.3684793,
+            50.3981564
+          ]
+        ],
+        [
+          [
+            479,
+            606
+          ],
+          [
+            30.3784079,
+            50.4005567
+          ]
+        ],
+        [
+          [
+            479,
+            580
+          ],
+          [
+            30.3784876,
+            50.4014657
+          ]
+        ],
+        [
+          [
+            625,
+            308
+          ],
+          [
+            30.3859132,
+            50.4107508
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        24.3,
+        22.8,
+        3.3,
+        4.7,
+        3.0
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-5.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": true,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-6",
+      "number": 6,
+      "categories": [
+        "C1",
+        "C",
+        "D1",
+        "D",
+        "C1E",
+        "CE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-6.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-6.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "needs-review",
+      "verified": false,
+      "color": "#5953a3",
+      "notes": "Потрібне уточнення геоприв’язки: залишкове відхилення контрольних точок до 52 м.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 52.0,
+      "sourceSha256": "1394146cf500627de1597301e3ccf33cbf341ef2183a6565b2f34d37a68f0923",
+      "originalSizeBytes": 301815,
+      "controls": [
+        [
+          [
+            640,
+            274
+          ],
+          [
+            30.3855,
+            50.4107
+          ]
+        ],
+        [
+          [
+            500,
+            478
+          ],
+          [
+            30.3640633,
+            50.3920938
+          ]
+        ],
+        [
+          [
+            385,
+            551
+          ],
+          [
+            30.3494481,
+            50.3846151
+          ]
+        ],
+        [
+          [
+            269,
+            637
+          ],
+          [
+            30.3346236,
+            50.3773133
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        3.0,
+        21.3,
+        52.0,
+        27.7
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-6.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": false,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-7",
+      "number": 7,
+      "categories": [
+        "B",
+        "D",
+        "D1",
+        "BE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-7.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-7.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "scheme-checked",
+      "verified": true,
+      "color": "#cc477d",
+      "notes": "Ручне оцифрування послідовності руху зі схеми; геоприв’язка до перехресть OSM. Не навігація по смугах.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 3.1,
+      "sourceSha256": "464ff8439307b3cc83314819b46d27379aa0ee50e8e04ebbf91165c09c8c23aa",
+      "originalSizeBytes": 335390,
+      "controls": [
+        [
+          [
+            600,
+            301
+          ],
+          [
+            30.3851527,
+            50.408897
+          ]
+        ],
+        [
+          [
+            568,
+            428
+          ],
+          [
+            30.3827092,
+            50.4032367
+          ]
+        ],
+        [
+          [
+            483,
+            374
+          ],
+          [
+            30.3769732,
+            50.4056703
+          ]
+        ],
+        [
+          [
+            300,
+            680
+          ],
+          [
+            30.3640633,
+            50.3920938
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        3.1,
+        2.0,
+        2.3,
+        1.1
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-7.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": true,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-8",
+      "number": 8,
+      "categories": [
+        "C1",
+        "C",
+        "D1",
+        "D",
+        "C1E",
+        "CE",
+        "D1E",
+        "DE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-8.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-8.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "needs-review",
+      "verified": false,
+      "color": "#517326",
+      "notes": "Потрібне уточнення повороту Жулянська — Київська й геоприв’язки: до 54 м.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 53.4,
+      "sourceSha256": "5a4d9c8194916aeaca072a8a1c473df47c8faf5c02dd70a9224f5992ba6f9d39",
+      "originalSizeBytes": 368252,
+      "controls": [
+        [
+          [
+            369,
+            425
+          ],
+          [
+            30.3655378,
+            50.4091824
+          ]
+        ],
+        [
+          [
+            425,
+            665
+          ],
+          [
+            30.3684793,
+            50.3981564
+          ]
+        ],
+        [
+          [
+            580,
+            262
+          ],
+          [
+            30.3760244,
+            50.4170431
+          ]
+        ],
+        [
+          [
+            704,
+            393
+          ],
+          [
+            30.3849,
+            50.4107
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        45.6,
+        31.1,
+        53.4,
+        38.8
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-8.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": false,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-9",
+      "number": 9,
+      "categories": [
+        "B",
+        "D1",
+        "D",
+        "BE"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-9.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-9.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "needs-review",
+      "verified": false,
+      "color": "#227b9e",
+      "notes": "Потрібне уточнення геоприв’язки в районі Європейської: до 59 м.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 58.8,
+      "sourceSha256": "32d22195f44a4abf783d854970746171b2d8e0fb3e8154bb24f3d0bad0d3be60",
+      "originalSizeBytes": 347953,
+      "controls": [
+        [
+          [
+            476,
+            437
+          ],
+          [
+            30.3684793,
+            50.3981564
+          ]
+        ],
+        [
+          [
+            473,
+            557
+          ],
+          [
+            30.3682798,
+            50.3919038
+          ]
+        ],
+        [
+          [
+            414,
+            559
+          ],
+          [
+            30.3640633,
+            50.3920938
+          ]
+        ],
+        [
+          [
+            459,
+            678
+          ],
+          [
+            30.367332,
+            50.3843158
+          ]
+        ],
+        [
+          [
+            363,
+            700
+          ],
+          [
+            30.3599005,
+            50.3831315
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        51.0,
+        39.5,
+        58.8,
+        16.2,
+        31.1
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-9.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": false,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-10",
+      "number": 10,
+      "categories": [
+        "B",
+        "C1",
+        "C",
+        "D1",
+        "D",
+        "BE",
+        "C1E"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-10.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-10.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "needs-review",
+      "verified": false,
+      "color": "#995523",
+      "notes": "Послідовність розворотів східного відгалуження неоднозначна.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 2.2,
+      "sourceSha256": "ad307e3ae4c90c0e4a028135260908da417f93cfcda9981e8fb127222c95b30f",
+      "originalSizeBytes": 315751,
+      "controls": [
+        [
+          [
+            481,
+            415
+          ],
+          [
+            30.3785839,
+            50.4049074
+          ]
+        ],
+        [
+          [
+            591,
+            450
+          ],
+          [
+            30.3834933,
+            50.4039695
+          ]
+        ],
+        [
+          [
+            289,
+            599
+          ],
+          [
+            30.3702256,
+            50.3998435
+          ]
+        ],
+        [
+          [
+            519,
+            351
+          ],
+          [
+            30.3802703,
+            50.4066371
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        2.2,
+        0.3,
+        0.5,
+        1.5
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-10.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": false,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-11",
+      "number": 11,
+      "categories": [
+        "B",
+        "C1",
+        "C",
+        "D1",
+        "D",
+        "BE",
+        "C1E"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-11.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-11.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "scheme-checked",
+      "verified": true,
+      "color": "#5c4eb9",
+      "notes": "Ручне оцифрування послідовності руху зі схеми; геоприв’язка до перехресть OSM. Не навігація по смугах.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 5.3,
+      "sourceSha256": "df3d258778354a9f440454763575493771131671d2c02f1fbe4f8f0f8f646d54",
+      "originalSizeBytes": 302100,
+      "controls": [
+        [
+          [
+            512,
+            449
+          ],
+          [
+            30.3785839,
+            50.4049074
+          ]
+        ],
+        [
+          [
+            697,
+            561
+          ],
+          [
+            30.3858255,
+            50.4020332
+          ]
+        ],
+        [
+          [
+            303,
+            650
+          ],
+          [
+            30.3702256,
+            50.3998435
+          ]
+        ],
+        [
+          [
+            468,
+            422
+          ],
+          [
+            30.3769732,
+            50.4056703
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        5.3,
+        1.0,
+        0.0,
+        4.3
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-11.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": true,
+        "fieldVerified": false
+      }
+    },
+    {
+      "id": "3246-12",
+      "number": 12,
+      "categories": [
+        "B",
+        "C1",
+        "C",
+        "D1",
+        "D",
+        "BE",
+        "C1E"
+      ],
+      "approvedAt": "2025-12-17",
+      "order": "260",
+      "source": "https://hsc.gov.ua/wp-content/uploads/2025/12/3246-12.jpg",
+      "sourcePage": "https://hsc.gov.ua/index/poslugi/vidacha-posvidchennya-vodiya/marshruti/kiyivska-obl-kiyevo-svyatoshinskij-r-n-s-sofiyivska-borshhagivka-vul-lva-tolstogo-2-tsts-mvs-3246/",
+      "localScheme": "schemes/3246-12.jpg",
+      "retrievedAt": "2026-09-15",
+      "verification": "scheme-checked",
+      "verified": true,
+      "color": "#bb392c",
+      "notes": "Ручне оцифрування послідовності руху зі схеми; геоприв’язка до перехресть OSM. Не навігація по смугах.",
+      "coordinateAccuracy": "Геоприв’язка растрової схеми; орієнтовна точність 30–50 м, не точність смуги руху.",
+      "controlResidualMaxMetres": 20.9,
+      "sourceSha256": "0d157b70b462c337963a37419d815c7cca6ec2ba9b5a413082e777f531d4963e",
+      "originalSizeBytes": 330508,
+      "controls": [
+        [
+          [
+            401,
+            622
+          ],
+          [
+            30.3702256,
+            50.3998435
+          ]
+        ],
+        [
+          [
+            616,
+            325
+          ],
+          [
+            30.3793321,
+            50.4077402
+          ]
+        ],
+        [
+          [
+            619,
+            389
+          ],
+          [
+            30.3793243,
+            50.4056115
+          ]
+        ],
+        [
+          [
+            637,
+            364
+          ],
+          [
+            30.3802703,
+            50.4066371
+          ]
+        ]
+      ],
+      "controlResidualMetres": [
+        1.8,
+        1.8,
+        20.9,
+        20.9
+      ],
+      "traceFile": "research/traces.json",
+      "overlay": "research/qa-12.png",
+      "checks": {
+        "sourceHeaderRead": true,
+        "geometryOverlayInspected": true,
+        "travelOrderConfirmed": true,
+        "fieldVerified": false
+      }
+    }
+  ],
+  "shelters": {
+    "count": 209,
+    "coverageMetres": 2000,
+    "coverageRule": "Усі об’єкти Борщагівської громади, а також об’єкти інших реєстрів у межах 2000 м від будь-якої з 12 ліній схем (включно з неперевіреними).",
+    "entranceVerified": false,
+    "fieldVerified": false,
+    "sources": [
+      {
+        "name": "Борщагівська громада",
+        "count": 13,
+        "page": "https://brada.gov.ua/dsns/skhovyshcha-ukryttia-hromady/",
+        "coordinates": "https://brada.gov.ua/maps/shelters.html",
+        "retrievedAt": "2026-09-15",
+        "file": "research/shelters-source.html",
+        "sha256": "a75be50badac80f313e089fcb5c1d7493bd0b1e904d1a0c92586f5e902ef2996",
+        "coordinateCheck": "13 пар координат перенесено без змін; діапазон і відповідність імен перевірено. Точність входу не підтверджена."
+      },
+      {
+        "name": "Київська ОВА",
+        "count": 69,
+        "page": "https://koda.gov.ua/czyvilnyj-front/zahysni-sporudy-tochky-obigrivu/ukryttya/",
+        "coordinates": "https://www.google.com/maps/d/viewer?mid=133eWWMRjEzUA1_n5d2Ae28nwvrIP41U",
+        "retrievedAt": "2026-09-16",
+        "file": "research/shelters-koda.kml",
+        "sha256": "1b4c3ef1fbabf79d791bec1bab43a516b69825d0e8f1bcb4ac57b46902002b88",
+        "coordinateCheck": "Координати перенесено без змін. 14 записів КОВА збігаються з 13 об’єктами громади (назва, адреса, до 250 м) і не дублюються; їхній тип і графік додано до об’єктів громади."
+      },
+      {
+        "name": "КМДА, мапа укриттів Києва",
+        "count": 127,
+        "page": "https://gis.kyivcity.gov.ua/shelter/",
+        "coordinates": "https://gisserver-stage.kyivcity.gov.ua/mayno/rest/services/KYIV_API/Public_protection/MapServer/0/query",
+        "retrievedAt": "2026-09-16",
+        "file": "research/shelters-kyiv.geojson",
+        "sha256": "83129e4685109e16567c65823b481702e4dac4991107c7f1732f267be8668e2e",
+        "coordinateCheck": "Лише записи з actual=1; повтори з тією самою адресою, координатою та типом приміщення відкинуто. Координати без змін."
+      }
+    ]
+  }
+}

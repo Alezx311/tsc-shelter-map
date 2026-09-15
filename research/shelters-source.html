@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#155b9f">
+<title>Карта укриттів Борщагівської територіальної громади</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+ integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+:root{
+  --blue:#155b9f;--blue-dark:#0f456f;--blue-soft:#eaf3fb;
+  --text:#17212b;--muted:#667482;--border:#d9e1e8;--surface:#fff;--bg:#f3f6f8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;min-height:640px;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+button,input{font:inherit}
+.app{height:100%;min-height:640px;display:grid;grid-template-columns:minmax(280px,350px) minmax(0,1fr)}
+.panel{background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.head{padding:16px 16px 13px;background:var(--blue);color:#fff}
+.head h1{font-size:18px;line-height:1.25;margin:0 0 5px;font-weight:750}
+.head p{margin:0;font-size:12px;line-height:1.4;opacity:.92}
+.tools{padding:11px;border-bottom:1px solid var(--border);display:grid;gap:9px}
+.search{width:100%;height:42px;border:1px solid var(--border);border-radius:9px;padding:0 12px;background:#fff;color:var(--text)}
+.search:focus{outline:3px solid rgba(21,91,159,.16);border-color:var(--blue)}
+.filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:1px;scrollbar-width:thin}
+.filters button{white-space:nowrap;min-height:38px;border:1px solid var(--border);border-radius:999px;background:#fff;padding:7px 10px;cursor:pointer;color:var(--text);font-size:12px}
+.filters button.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.actions{display:flex;gap:7px;flex-wrap:wrap}
+.action{min-height:38px;border:1px solid var(--border);background:#fff;border-radius:8px;padding:7px 10px;cursor:pointer;font-size:12px;color:var(--blue-dark)}
+.action:hover{background:var(--blue-soft)}
+.count{font-size:12px;color:var(--muted);padding:0 2px}
+.list{overflow:auto;padding:8px 9px 16px;display:grid;gap:7px;overscroll-behavior:contain}
+.item{border:1px solid var(--border);background:#fff;border-radius:10px;padding:9px;cursor:pointer;text-align:left;width:100%;display:block;color:inherit}
+.item:hover,.item:focus-visible{border-color:#8fb5d5;background:#f8fbfe;outline:none}
+.item-row{display:flex;gap:9px;align-items:flex-start}
+.num{width:29px;height:29px;flex:0 0 29px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff;font-size:12px;font-weight:800}
+.item h2{margin:1px 0 3px;font-size:13px;line-height:1.28;font-weight:700}
+.item p{margin:0;color:var(--muted);font-size:11.5px;line-height:1.35}
+.map-wrap{position:relative;min-width:0;min-height:0;background:#dfe8ef}
+#map{width:100%;height:100%;min-height:640px}
+.map-badge{position:absolute;z-index:500;right:12px;bottom:14px;background:rgba(255,255,255,.96);
+  border:1px solid var(--border);border-radius:9px;padding:7px 9px;font-size:11px;color:var(--muted);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);pointer-events:none}
+.boundary-key{display:inline-block;width:20px;height:0;border-top:3px solid var(--blue);margin-right:6px;vertical-align:middle}
+.leaflet-popup-content-wrapper{border-radius:10px}
+.leaflet-popup-content{margin:12px 13px;min-width:220px}
+.pop-title{font-weight:750;font-size:14px;line-height:1.3;margin-bottom:5px}
+.pop-address{font-size:12.5px;line-height:1.4;color:#3f4c57}
+.route{display:inline-block;margin-top:9px;text-decoration:none;background:var(--blue);color:#fff!important;border-radius:8px;padding:8px 10px;font-size:12px;font-weight:650}
+.source{border-top:1px solid var(--border);padding:8px 11px;font-size:10.5px;line-height:1.35;color:var(--muted);background:#fbfcfd}
+.source a{color:var(--blue-dark)}
+@media(max-width:980px){
+  .app{grid-template-columns:300px minmax(0,1fr)}
+}
+@media(max-width:720px){
+  html,body{height:auto;min-height:0}
+  .app{height:auto;min-height:0;display:flex;flex-direction:column}
+  .panel{order:2;border-right:0;border-top:1px solid var(--border);overflow:visible}
+  .map-wrap{order:1;height:55vh;min-height:390px;max-height:560px}
+  #map{height:100%;min-height:390px}
+  .head{padding:12px 13px 10px}
+  .head h1{font-size:16px}
+  .tools{padding:9px}
+  .list{overflow:visible;padding-bottom:12px}
+  .map-badge{bottom:9px;right:8px;font-size:10px}
+}
+@media(max-width:420px){
+  .map-wrap{height:52vh;min-height:340px}
+  #map{min-height:340px}
+  .filters button,.action{font-size:11.5px}
+  .item h2{font-size:12.5px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="panel" aria-label="Перелік укриттів">
+    <div class="head">
+      <h1>Укриття Борщагівської територіальної громади</h1>
+      <p>Бучанський район · 13 об'єктів</p>
+    </div>
+    <div class="tools">
+      <input id="search" class="search" type="search" placeholder="Пошук за назвою або адресою" aria-label="Пошук">
+      <div class="filters" aria-label="Фільтр за населеним пунктом">
+        <button type="button" class="active" data-filter="all">Усі</button>
+        <button type="button" data-filter="Софіївська Борщагівка">Софіївська Борщагівка</button>
+        <button type="button" data-filter="Петропавлівська Борщагівка">Петропавлівська Борщагівка</button>
+        <button type="button" data-filter="Чайки">Чайки</button>
+      </div>
+      <div class="actions">
+        <button id="fitAll" type="button" class="action">Показати всю громаду</button>
+        <button id="fitShelters" type="button" class="action">Показати всі укриття</button>
+      </div>
+      <div id="count" class="count" aria-live="polite"></div>
+    </div>
+    <div id="list" class="list"></div>
+  </aside>
+  <main class="map-wrap">
+    <div id="map" aria-label="Інтерактивна карта укриттів"></div>
+    <div class="map-badge"><span class="boundary-key"></span>межі громади</div>
+  </main>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+const shelters = [{"id":1,"settlement":"Софіївська Борщагівка","name":"ОЗО «Софіївсько-Борщагівський ліцей»","address":"пров. Шкільний, 1В","lat":50.4100539,"lon":30.3606652},{"id":2,"settlement":"Софіївська Борщагівка","name":"ЗДО «Щаслива країна»","address":"вул. Яблунева, 7Б","lat":50.4017478665,"lon":30.3940197345},{"id":3,"settlement":"Софіївська Борщагівка","name":"ЗДО «Дивосвіт»","address":"вул. Павла Чубинського, 6А","lat":50.4017381325,"lon":30.3629595852},{"id":4,"settlement":"Софіївська Борщагівка","name":"ЗДО «Совенятко»","address":"просп. Героїв Небесної Сотні, 16","lat":50.3986335,"lon":30.3406898},{"id":5,"settlement":"Софіївська Борщагівка","name":"ЗДО «Левенятко»","address":"вул. Райдужна, 143","lat":50.4052760138,"lon":30.333919747},{"id":6,"settlement":"Софіївська Борщагівка","name":"ЗДО «Золотий колосок»","address":"вул. Соборна, 53Б","lat":50.40787132039984,"lon":30.35892525034549},{"id":7,"settlement":"Петропавлівська Борщагівка","name":"ЗСО «Ліцей № 1»","address":"вул. Паркова, 34Б","lat":50.4219547191,"lon":30.3223458529},{"id":8,"settlement":"Петропавлівська Борщагівка","name":"ЗСО «Ліцей Петропавлівський»","address":"вул. Соборна, 30","lat":50.43646205277469,"lon":30.34121610878432},{"id":9,"settlement":"Петропавлівська Борщагівка","name":"ЗДО «Чарівний замок»","address":"вул. Паркова, 34А","lat":50.4224738308,"lon":30.3237777674},{"id":10,"settlement":"Петропавлівська Борщагівка","name":"ЗДО «Щасливий»","address":"вул. Соборна, 10Ж","lat":50.4386470134,"lon":30.3491560322},{"id":11,"settlement":"Чайки","name":"Чайківська філія ЗСО «Ліцей № 1»","address":"вул. Валерія Лобановського, 21/3","lat":50.44033692784207,"lon":30.283429764856102},{"id":12,"settlement":"Чайки","name":"ЗДО «Чайка»","address":"вул. Валерія Лобановського, 5","lat":50.4397809751,"lon":30.2824247217},{"id":13,"settlement":"Софіївська Борщагівка","name":"Спортивно-культурний комплекс «Софіївський»","address":"вул. Соборна, 114Б","lat":50.4100290355,"lon":30.3558422332}];
+const boundary = {"type":"Feature","properties":{"name":"Межі Борщагівської територіальної громади"},"geometry":{"type":"MultiPolygon","coordinates":[[[[30.282136,50.4515976],[30.2826216,50.4469001],[30.274783,50.4360426],[30.2758235,50.4349347],[30.2749911,50.4340484],[30.2869225,50.4260272],[30.296426,50.4166764],[30.3069007,50.4203104],[30.3089817,50.4179173],[30.3030854,50.4153913],[30.303016,50.4150367],[30.3120339,50.4061735],[30.3125195,50.4060406],[30.3148781,50.4067939],[30.3163348,50.4051542],[30.314115,50.404002],[30.3289599,50.3884913],[30.3414463,50.3935434],[30.3441517,50.3923468],[30.3463714,50.390264],[30.3499093,50.3926127],[30.3516435,50.395316],[30.3574704,50.3947399],[30.3626037,50.393765],[30.3680145,50.4002794],[30.3826513,50.3953603],[30.3834143,50.3935434],[30.3872296,50.392657],[30.3909755,50.3924355],[30.4110231,50.3971773],[30.4164338,50.3991272],[30.3999241,50.4046224],[30.3992304,50.4052872],[30.393126,50.4075473],[30.3816107,50.4151254],[30.3804315,50.4149924],[30.3793909,50.4155685],[30.3784892,50.417031],[30.3770324,50.4179173],[30.3772405,50.4181389],[30.3762694,50.4184491],[30.3762,50.4188479],[30.369055,50.4234568],[30.3678757,50.4250965],[30.3659334,50.4254067],[30.3655866,50.4262488],[30.3666965,50.4270464],[30.368292,50.4256726],[30.3673902,50.4269135],[30.366419,50.4272237],[30.3610082,50.4350234],[30.3596209,50.447166],[30.352684,50.4474762],[30.3530308,50.451642],[30.3515741,50.4517749],[30.3511579,50.4537248],[30.3501174,50.4537248],[30.3496318,50.453193],[30.3492849,50.4484512],[30.3377004,50.4479637],[30.3236185,50.4457922],[30.3170979,50.4460581],[30.3161961,50.4456149],[30.282136,50.4515976]]],[[[30.4062366,50.3942081],[30.406306,50.393765],[30.4126186,50.3896879],[30.4058204,50.3841926],[30.4285734,50.3717841],[30.4371057,50.3787861],[30.4414759,50.381578],[30.4277409,50.3924355],[30.4254518,50.3920809],[30.4225383,50.3940752],[30.4210815,50.3945626],[30.4178212,50.3923025],[30.4148384,50.3939865],[30.413451,50.3938093],[30.4108843,50.3954933],[30.4062366,50.3942081]]]]}};
+
+const map = L.map('map',{zoomControl:true,preferCanvas:true});
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+  maxZoom:19,
+  attribution:'&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+const boundaryLayer = L.geoJSON(boundary,{
+  style:{color:'#155b9f',weight:3,opacity:.9,fillColor:'#155b9f',fillOpacity:.055}
+}).addTo(map);
+
+const markerLayer = L.layerGroup().addTo(map);
+const markerById = new Map();
+let currentFilter='all';
+let query='';
+
+function iconFor(id){
+  return L.divIcon({
+    className:'',
+    html:`<div style="width:32px;height:32px;border-radius:50%;background:#155b9f;border:3px solid white;box-shadow:0 1px 7px rgba(0,0,0,.35);color:white;display:grid;place-items:center;font:800 12px system-ui">${id}</div>`,
+    iconSize:[32,32],iconAnchor:[16,16],popupAnchor:[0,-15]
+  });
+}
+function routeUrl(s){
+  return `https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lon}`;
+}
+function popupHtml(s){
+  return `<div class="pop-title">№${s.id} · ${s.name}</div>
+    <div class="pop-address">${s.settlement}, ${s.address}</div>
+    <a class="route" target="_blank" rel="noopener" href="${routeUrl(s)}">Прокласти маршрут</a>`;
+}
+
+shelters.forEach(s=>{
+  const m=L.marker([s.lat,s.lon],{icon:iconFor(s.id),title:s.name});
+  m.bindPopup(popupHtml(s),{maxWidth:310});
+  markerById.set(s.id,m);
+});
+
+function visible(){
+  return shelters.filter(s=>{
+    const f=currentFilter==='all'||s.settlement===currentFilter;
+    const hay=`${s.name} ${s.address} ${s.settlement}`.toLowerCase();
+    return f && hay.includes(query);
+  });
+}
+function render(){
+  markerLayer.clearLayers();
+  const items=visible();
+  items.forEach(s=>markerById.get(s.id).addTo(markerLayer));
+  document.getElementById('count').textContent=`Показано: ${items.length} з 13`;
+  const list=document.getElementById('list');
+  list.replaceChildren();
+  items.forEach(s=>{
+    const btn=document.createElement('button');
+    btn.type='button'; btn.className='item';
+    btn.innerHTML=`<div class="item-row"><span class="num">${s.id}</span><span><h2>${s.name}</h2><p>${s.settlement}<br>${s.address}</p></span></div>`;
+    btn.addEventListener('click',()=>{
+      map.setView([s.lat,s.lon],17,{animate:true});
+      markerById.get(s.id).openPopup();
+    });
+    list.appendChild(btn);
+  });
+}
+function fitMarkers(){
+  const items=visible();
+  if(!items.length) return;
+  const group=L.featureGroup(items.map(s=>markerById.get(s.id)));
+  map.fitBounds(group.getBounds().pad(.12),{maxZoom:15});
+}
+function fitBoundary(){
+  map.fitBounds(boundaryLayer.getBounds().pad(.035),{maxZoom:14});
+}
+
+document.getElementById('search').addEventListener('input',e=>{
+  query=e.target.value.trim().toLowerCase(); render();
+});
+document.querySelectorAll('.filters button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active'); currentFilter=btn.dataset.filter; render(); fitMarkers();
+  });
+});
+document.getElementById('fitAll').addEventListener('click',fitBoundary);
+document.getElementById('fitShelters').addEventListener('click',()=>{currentFilter='all';query='';document.getElementById('search').value='';document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.dataset.filter==='all'));render();fitMarkers();});
+
+render();
+fitBoundary();
+setTimeout(()=>map.invalidateSize(true),180);
+window.addEventListener('resize',()=>map.invalidateSize(false));
+</script>
+</body>
+</html>
